@@ -5,10 +5,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspace example build"
+    "build": "yarn workspace blog build",
+    "develop": "yarn workspace blog develop"
   },
   "workspaces": [
     "gatsby-ghost-novela-theme",
-    "example"
+    "blog"
   ]
 }

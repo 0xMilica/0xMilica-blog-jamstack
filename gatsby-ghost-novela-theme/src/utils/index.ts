@@ -10,7 +10,7 @@ import theme from "../gatsby-plugin-theme-ui";
  * @param {number} min
  * @param {number} max
  *
- * @example
+ * @blog
  *    clamp(5, 1, 10) 5
  *    clamp(50, 1, 10) 10
  *    clamp(0.5, 1, 10) 1
@@ -25,7 +25,7 @@ export const clamp = (value: number, min: number, max: number) =>
  * @param {number} len How many items of step 1 do you want in the range?
  * @param {number} step Defaults to incrementing every 1
  *
- * @example
+ * @blog
  *    range(1, 5) [1, 2, 3, 4, 5]
  *    range(3, 5) [3, 4, 5, 6, 7]
  *    range(1, 5, 0.1) [1, 1.1, 1.2, 1.3, 1.4]
@@ -62,7 +62,7 @@ export const debounce = (fn: () => any, time = 100) => {
  * @param {string} name Name of the breakpoint we wish to retrieve
  *                      All options can be found in styles/theme
  *
- * @example
+ * @blog
  *    getBreakpointFromTheme('tablet') 768
  */
 export const getBreakpointFromTheme: (arg0: string) => number = name =>
@@ -114,7 +114,7 @@ export function useResize() {
  *
  * @param {string} action enable or disable
  *
- * @example
+ * @blog
  *    scrollable('enable') Will allow the user to scroll again
  *    scrollable('disable') Will freeze the screen
  */

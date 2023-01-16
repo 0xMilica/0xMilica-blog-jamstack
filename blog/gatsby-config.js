@@ -1,70 +1,61 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   plugins: [
     {
       resolve: `@draftbox-co/gatsby-ghost-novela-theme`,
       options: {
         siteConfig: {
-          siteUrl: "https://ghost-novela-preview.draftbox.co",
+          siteUrl: "https://0xmilica.com",
           postsPerPage: 12,
-          siteTitleMeta: "Built with Draftbox",
-          siteDescriptionMeta:
-            "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding.",
+          siteTitleMeta: "0xMilica's Web3 Blog",
+          siteDescriptionMeta: "Web3 from Developer Relations Engineer point of view",
           shareImageWidth: 1000,
           shareImageHeight: 523,
-          shortTitle: "Built with Draftbox",
+          shortTitle: "0xMilica",
           siteIcon: "favicon.png",
-          backgroundColor: "#e9e9e9",
+          backgroundColor: "#c49f9f",
           themeColor: "#15171A",
-          apiUrl: "https://ghost.theasdfghjkl.com",
+          apiUrl: "https://cms.0xmilica.com",
           header: {
             navigation: [
               {
                 label: "Home",
-                url: "https://ghost-novela-preview.draftbox.co/",
+                url: "https://0xmilica.com",
               },
               {
-                label: "Contact",
-                url: "https://ghost-novela-preview.draftbox.co/contact",
-              },
+                label: "About",
+                url: "https://0xmilica.com/author/milica",
+              }
             ],
           },
           footer: {
-            copyright: "Built with Draftbox",
+            copyright: "0xMilica",
             navigation: [
               {
                 label: "Home",
-                url: "https://ghost-novela-preview.draftbox.co/",
+                url: "https://0xmilica.com/",
               },
               {
-                label: "Sitemap",
-                url: "https://ghost-novela-preview.draftbox.co/sitemap.xml",
-              },
-              {
-                label: "RSS",
-                url: "https://ghost-novela-preview.draftbox.co/rss.xml",
-              },
-              {
-                label: "Contact",
-                url: "https://ghost-novela-preview.draftbox.co/contact",
-              },
-              {
-                label: "External Link",
-                url: "https://spectrum.chat/gatsby-js/themes?tab=posts",
-              },
+                label: "About",
+                url: "https://0xmilica.com/author/milica",
+              }
             ],
           },
           subscribeWidget: {
-            visible: true,
-            title: "Subscribe to Built with Draftbox",
+            visible: false,
+            title: "Subscribe ",
             helpText: "Get the latest posts delivered right to your inbox.",
-            successMessage: "Thanks for subscribing to Built with Draftbox.",
+            successMessage: "Thanks for subscribing",
           },
           socialLinks: {
-            twitter: "https://twitter.com/draftboxhq",
-            facebook: "https://facebook.com/",
-            instagram: "https://www.instagram.com/",
-            linkedin: "https://linkedin.com",
-            github: "https://github.com/draftbox-co",
+            twitter: "https://twitter.com/lady_web3",
+            linkedin: "https://www.linkedin.com/in/milica-vulic-007/",
+            github: "https://github.com/MilicaVulic",
+            instagram: "",
+            facebook: "",
             pinterest: "",
             youtube: "",
             dribbble: "",
@@ -73,37 +64,36 @@ module.exports = {
             whatsapp: "",
           },
           contactWidget: {
-            title: "Contact Built with Draftbox",
+            title: "0xMilica",
             successMessage: "We’ll get in touch with you soon.",
           },
           metadata: {
-            title: "Built with Draftbox",
-            description:
-              "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+            title: "0xMilica's Web3 Blog",
+            description: "Web3 from Developer Relations Engineer point of view",
           },
           twitterCard: {
-            title: "Built with Draftbox",
-            description:
-              "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+            title: "0xMilica's Web3 Blog",
+            description: "Web3 from Developer Relations Engineer point of view",
             imageUrl: "twitterImage.png",
-            username: "@DraftboxHQ",
+            username: "@lady_web3",
           },
           facebookCard: {
-            title: "Built with Draftbox",
-            description:
-              "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+            title: "0xMilica's Web3 Blog",
+            description: "Web3 from Developer Relations Engineer point of view",
             imageUrl: "facebookImage.png",
             appId: "",
             width: 1000,
             height: 523,
           },
-          siteTitle: "Built with Draftbox",
-          siteDescription:
-            "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding.",
+          siteTitle: "0xMilica",
+          siteDescription: "Web3 from Dev Relations Engineer point of view",
+          hero: {
+            heading: `Web3 from Dev Relations Engineer point of view`,
+            maxWidth: 652,
+          },
           language: "en",
-          logoUrl: "logo.svg",
-          iconUrl:
-            "https://ghost.theasdfghjkl.com/content/images/2020/05/draftbox-colored-icon.png",
+          logoUrl: "/images/logo.svg",
+          iconUrl: "",
           coverUrl: "cover.jpg",
           alternateLogoUrl: "alternateLogo.svg",
           themeConfig: {
@@ -167,13 +157,13 @@ module.exports = {
         },
         ghostConfig: {
           development: {
-            apiUrl: "https://ghost.theasdfghjkl.com",
-            contentApiKey: "3d17fad3efaa911df1ed577638",
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_API_KEY,
             version: "v3",
           },
           production: {
-            apiUrl: "https://ghost.theasdfghjkl.com",
-            contentApiKey: "3d17fad3efaa911df1ed577638",
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_API_KEY,
             version: "v3",
           },
         },

@@ -23,7 +23,7 @@ const StyledGatsbyImag = styled(GatsbyImg)`
  * The component works out the best element to render. You can tell the difference
  * between fluid and fixed Gatsby imagaes by checking to see if a width and height property exist.
  *
- * @example
+ * @blog
  * <Img src={...fixed Gatsby image} />
  * <Img src={...fluid Gatsby image} />
  * <Img src="https://..." />

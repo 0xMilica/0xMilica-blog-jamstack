@@ -13,7 +13,7 @@ interface AsideProps {
 
 /**
  * Aside: the wonderful fixed positioned elements that are to the left
- * and the right of the written content on our articles. For example, the
+ * and the right of the written content on our articles. For blog, the
  * progress bar and dark controls are within an Aside. The main responsibility
  * of this component is to show or hide its children if it's at the top or bottom
  * of the page!

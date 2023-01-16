@@ -10,7 +10,7 @@ const toEm = (size: number) => size / 16 + "em";
  *
  * There are also break points to cover coarse and fine pointer devices
  *
- * @example
+ * @blog
  *
  *    ${mediaqueries.phone` width: 100px; `};
  *    ${mediaqueries.tablet_up` width: 200px; `};

@@ -1,8 +1,8 @@
 {
-  "name": "example",
+  "name": "blog",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Draftbox",
+  "author": "0xMilica",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",

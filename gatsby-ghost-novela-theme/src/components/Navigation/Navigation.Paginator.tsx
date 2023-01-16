@@ -13,7 +13,7 @@ import { IPaginator } from "@types";
  * <Paginator />
  *
  * 1 2 3 ... final page NEXT
- * Component to navigate between different pages on a series of blog post, for example.
+ * Component to navigate between different pages on a series of blog post, for blog.
  *
  * We're using a <nav> element here so make sure to put the pagination component
  * INSIDE of a section to make sure the markup stays contextually relevant

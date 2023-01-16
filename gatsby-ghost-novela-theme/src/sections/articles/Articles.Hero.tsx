@@ -10,23 +10,6 @@ import { IAuthor } from "@types";
 
 import { GridLayoutContext } from "./Articles.List.Context";
 
-const authorQuery = graphql`
-  {
-    site: allSite {
-      edges {
-        node {
-          siteMetadata {
-            hero {
-              heading
-              maxWidth
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 const siteSettingsQuery = graphql`
   {
     site {
@@ -34,6 +17,10 @@ const siteSettingsQuery = graphql`
         siteTitle
         siteDescription
         logoUrl
+        hero {
+          heading
+          maxWidth
+        }
       }
     }
   }
@@ -44,13 +31,12 @@ const ArticlesHero: React.FC = () => {
     GridLayoutContext
   );
 
-  // const results = useStaticQuery(authorQuery);
   const siteSettings = useStaticQuery(siteSettingsQuery);
 
   const title = siteSettings.site.siteMetadata.siteTitle;
   const description = siteSettings.site.siteMetadata.siteDescription;
   const logoUrl = siteSettings.site.siteMetadata.logoUrl;
-  // const hero = results.site.edges[0].node.siteMetadata.hero;
+  const hero = siteSettings.site.siteMetadata.hero;
   const tilesIsActive = hasSetGridLayout && gridLayout === "tiles";
   // const featuredAuthor = authors.find((author) => author.featured);
 
@@ -63,15 +49,11 @@ const ArticlesHero: React.FC = () => {
 
   return (
     <Section relative id="Articles__Hero">
-      {/* <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
+      <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
-      </HeadingContainer> */}
-      <HeadingContainer style={{ maxWidth: `600px` }}>
-        <HeroHeading dangerouslySetInnerHTML={{ __html: title }} />
-        <HeroDescription>{description}</HeroDescription>
+        <>by 0xMilica</>
       </HeadingContainer>
-      {/* <SubheadingContainer>
-        <Bio author={featuredAuthor} />
+      <SubheadingContainer>
         <GridControlsContainer>
           <GridButton
             onClick={() => setGridLayout("tiles")}
@@ -92,7 +74,7 @@ const ArticlesHero: React.FC = () => {
             <Icons.Rows />
           </GridButton>
         </GridControlsContainer>
-      </SubheadingContainer> */}
+      </SubheadingContainer>
     </Section>
   );
 };
@@ -102,7 +84,7 @@ export default ArticlesHero;
 const SubheadingContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 100px;
 
   ${mediaqueries.desktop`

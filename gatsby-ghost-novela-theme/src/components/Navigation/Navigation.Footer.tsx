@@ -115,15 +115,6 @@ const Footer: React.FC<{}> = () => {
             <SocialLinks links={social} />
           </SocialLinksContainer>
         </FooterContainer>
-        <CreditsContainer>
-          <FooterLink
-            rel="noreferrer noopener"
-            href="https://draftbox.co"
-            target="_blank"
-          >
-            PUBLISHED WITH DRAFTBOX
-          </FooterLink>
-        </CreditsContainer>
       </Section>
     </>
   );
@@ -136,16 +127,16 @@ const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // padding-bottom: 80px;
+  padding-bottom: 80px;
   color: ${(p) => p.theme.colors.grey};
 
   ${mediaqueries.tablet`
   flex-direction: column;
-  // padding-bottom: 100px;
+    padding-bottom: 100px;
   `}
 
   ${mediaqueries.phablet`
-  // padding-bottom: 50px;
+    padding-bottom: 50px;
   `}
 `;
 
@@ -172,13 +163,13 @@ const FooterText = styled.div`
     `}
 
 
-  // ${mediaqueries.tablet`
-  //   margin-bottom: 80px;
-  // `}
+  ${mediaqueries.tablet`
+    margin-bottom: 80px;
+  `}
 
-  // ${mediaqueries.phablet`
-  //   margin: 120px auto 100px;
-  // `}
+  ${mediaqueries.phablet`
+    margin: 120px auto 100px;
+  `}
 `;
 
 const FooterGradient = styled.div`
@@ -234,13 +225,4 @@ const FooterLink = styled.a`
   &.active {
     color: ${(p) => p.theme.colors.primary};
   }
-`;
-
-const CreditsContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
 `;
