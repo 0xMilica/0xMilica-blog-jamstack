@@ -18,7 +18,7 @@ module.exports = {
           siteIcon: "favicon.png",
           backgroundColor: "#c49f9f",
           themeColor: "#15171A",
-          apiUrl: "https://cms.0xmilica.com",
+          apiUrl: "https://0xmilica.com",
           header: {
             navigation: [
               {
