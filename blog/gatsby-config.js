@@ -51,7 +51,7 @@ module.exports = {
             successMessage: "Thanks for subscribing",
           },
           socialLinks: {
-            twitter: "https://twitter.com/lady_web3",
+            twitter: "https://twitter.com/0xMilica",
             linkedin: "https://www.linkedin.com/in/milica-vulic-007/",
             github: "https://github.com/MilicaVulic",
             instagram: "",
