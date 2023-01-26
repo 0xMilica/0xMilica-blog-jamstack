@@ -52,7 +52,7 @@ module.exports = {
           },
           socialLinks: {
             twitter: "https://twitter.com/0xMilica",
-            linkedin: "https://www.linkedin.com/in/milica-vulic-007/",
+            linkedin: "https://www.linkedin.com/in/0xMilica/",
             github: "https://github.com/MilicaVulic",
             instagram: "",
             facebook: "",
@@ -75,7 +75,7 @@ module.exports = {
             title: "0xMilica's Web3 Blog",
             description: "Web3 from Developer Relations Engineer point of view",
             imageUrl: "twitterImage.png",
-            username: "@lady_web3",
+            username: "@0xMilica",
           },
           facebookCard: {
             title: "0xMilica's Web3 Blog",
