@@ -53,7 +53,7 @@ module.exports = {
           socialLinks: {
             twitter: "https://twitter.com/0xMilica",
             linkedin: "https://www.linkedin.com/in/0xMilica/",
-            github: "https://github.com/MilicaVulic",
+            github: "https://github.com/0xMilica",
             instagram: "",
             facebook: "",
             pinterest: "",
